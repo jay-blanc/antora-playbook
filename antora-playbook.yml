@@ -1,0 +1,26 @@
+site:
+  title: POC Documentation Antora
+  start_page: component-a::index.adoc
+content:
+  sources:
+  - url: https://github.com/jay-blanc/antora-doc-asciidoc.git
+    branches: master
+  - url: https://github.com/jay-blanc/antora-doc-asciidoc-plantuml-simple.git
+    branches: master
+  - url: https://github.com/jay-blanc/antora-doc-asciidoc-plantuml-iuml.git
+    branches: master
+ui:
+  bundle:
+    url: ./ui-bundle.zip
+asciidoc:
+  attributes:
+#    plantuml-server-url: http://www.plantuml.com/plantuml
+#    kroki-server-url: https://kroki.io
+#    kroki-fetch-diagram: true
+    kroki-plantuml-include-paths: './modules/ROOT/examples'
+    source-highlighter: highlight.js
+    icons: font
+    icon-set: fa
+  extensions:
+#  - asciidoctor-plantuml
+  - asciidoctor-kroki

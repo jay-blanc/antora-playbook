@@ -1,0 +1,44 @@
+= README
+
+
+== Pré-requis
+
+.Version de nodejs
+----
+C:\Developpement>node -v
+v16.14.0
+----
+
+
+== Installation d'Antora
+
+.Séquence d'installation
+----
+$ node -e "fs.writeFileSync('package.json', '{}')"
+
+$ npm i -D -E @antora/cli@3.1 @antora/site-generator@3.1
+
+$ npx antora -v
+@antora/cli: 3.1.4
+@antora/site-generator: 3.1.4
+----
+
+=== Installation d'extensions
+
+.Exemple de l'installation de l'extension `asciidoctor-plantuml`
+----
+$ npm install asciidoctor-plantuml
+----
+
+.Exemple de l'installation de l'extension `asciidoctor-kroki`
+----
+$ npm install asciidoctor-kroki
+----
+
+
+== Exécution de la génération de site
+
+.Commande nodejs à exécuter
+----
+$ npx antora generate --stacktrace --log-level=all --fetch antora-playbook.yml
+----

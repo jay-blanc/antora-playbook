@@ -1,0 +1,29 @@
+@startuml
+
+component "**Repo Component A**\nAsciidoc Only" as componentA #e9ffe8
+note bottom of componentA
+  * Seulement de l'Asciidoc
+end note
+
+component "**Repo Component B**\nAsciidoc &\nPlantUML simple" as componentB #e9ffe8
+note bottom of componentB
+  * De l'Asciidoc
+  * De l'inclusion de PlantUML
+  ** Dans un seul fichier
+end note
+
+component "**Repo Component C**\nAsciidoc &\nPlantUML avec fragment" as componentC #e9ffe8
+note bottom of componentC
+  * De l'Asciidoc
+  * De l'inclusion de PlantUML avec :
+  ** Inclusion de fragments .iuml
+end note
+
+component "**Antora**\nPlaybook" as playbook #ffeded
+
+
+playbook -down- componentA
+playbook -down- componentB
+playbook -down- componentC
+
+@enduml
