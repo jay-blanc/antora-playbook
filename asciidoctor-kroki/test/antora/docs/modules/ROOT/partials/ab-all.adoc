@@ -1,0 +1,5 @@
+[plantuml,ab-partial-all-1,svg]
+----
+alice -> bob
+bob -> alice
+----

@@ -8,7 +8,7 @@ content:
   - url: https://github.com/jay-blanc/antora-doc-asciidoc-plantuml-simple.git
     branches: master
   - url: https://github.com/jay-blanc/antora-doc-asciidoc-plantuml-iuml.git
-    branches: master
+    branches: test-asciidoctor-kroki
 ui:
   bundle:
     url: ./ui-bundle.zip
@@ -16,11 +16,13 @@ asciidoc:
   attributes:
 #    plantuml-server-url: http://www.plantuml.com/plantuml
 #    kroki-server-url: https://kroki.io
-#    kroki-fetch-diagram: true
-    kroki-plantuml-include-paths: './modules/ROOT/examples'
+    kroki-fetch-diagram: true
+#    kroki-plantuml-include-paths: './modules/ROOT/examples'
+#    allow-uri-read: true
     source-highlighter: highlight.js
     icons: font
     icon-set: fa
   extensions:
 #  - asciidoctor-plantuml
-  - asciidoctor-kroki
+#  - asciidoctor-kroki
+  - ./asciidoctor-kroki/src/asciidoctor-kroki.js
