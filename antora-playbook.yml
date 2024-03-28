@@ -14,13 +14,11 @@ ui:
     url: ./ui-bundle.zip
 asciidoc:
   attributes:
-#    plantuml-server-url: http://www.plantuml.com/plantuml
-#    kroki-server-url: https://kroki.io
-#    kroki-fetch-diagram: true
-    kroki-plantuml-include-paths: './modules/ROOT/examples'
+    kroki-server-url: http://<SET_HERE_YOUR_KROKI_SERVER>:8000
+    kroki-fetch-diagram: true
+    kroki-http-method: post
     source-highlighter: highlight.js
     icons: font
     icon-set: fa
   extensions:
-#  - asciidoctor-plantuml
-  - asciidoctor-kroki
+  - ./asciidoctor-kroki/src/asciidoctor-kroki.js
