@@ -7,8 +7,6 @@ content:
     branches: master
   - url: https://github.com/jay-blanc/antora-doc-asciidoc-plantuml-simple.git
     branches: master
-  - url: https://github.com/jay-blanc/antora-doc-asciidoc-plantuml-iuml.git
-    branches: master
 ui:
   bundle:
     url: ./ui-bundle.zip
